@@ -98,5 +98,5 @@ ocpasswd -c /etc/ocserv/ocpasswd -d username
 iptables -t nat -L
 ```
 > *Attention* <br>
-> Sometimes iptables rules disappear after the reboot, you may need to add the rule again!
+> Sometimes iptables rules disappear after the reboot, so you may need to add the rule again!
 4. Terminate the process which uses the specific port. `kill $(lsof -t -i:port_number)`
