@@ -51,7 +51,7 @@ Set `ListenStream` and `ListenDatagram` to the same port number.
 systemctl daemon-reload
 nano /etc/sysctl.conf
 ```
-Uncomment `net.ipv4.ip_forward = 1`. <br>
+Uncomment `net.ipv4.ip_forward = 1` and `net.ipv6.conf.all.forwarding=1`. <br>
 Use `ip addr` to find your Ethernet interface; Typically, it is `eth0`.
 ```
 iptables -t nat -A POSTROUTING -o your_eth_I/F -j MASQUERADE
